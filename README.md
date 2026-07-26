@@ -1,5 +1,5 @@
 # CS499 ePortfolio
 
-## Videos
+## Milestone One: Code Review
 
 - [YouTube Video](https://youtu.be/bXNYA-oa3yo)
