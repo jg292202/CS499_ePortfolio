@@ -10,8 +10,24 @@ These enhancements align directly with the outcome of using proper techniques, s
 	
 Overall, the enhancement process improved my understanding of software design and engineering and reinforced the skills I will need in my professional career. The improved artifact now reflects my current abilities as a software engineer and demonstrates my growth throughout my coursework.   
 
-## Navigation
+
+## Original Artifact Files
+- [Original Dashboard (Dashboard.ipynb)](../original/software-engineering/Dashboard.ipynb)
+- [Original CRUD Module (CRUD_Python_Module2.py)](../original/software-engineering/CRUD_Python_Module2.py)
+- [Logo](../original/software-engineering/Grazioso%20Salvare%20Logo.png)
+
+## Enhanced Artifact Files
+- [Enhanced Dashboard (Dashboard_Refactored.ipynb)](../enhanced/software-engineering/Dashboard_Refactored.ipynb)
+- [Service Layer](../enhanced/software-engineering/service_layer.py)
+- [Logging Configuration](../enhanced/software-engineering/logging_config.py)
+- [Unit Tests (test_service_layer.py)](../enhanced/software-engineering/test_service_layer.py)
+- [Enhanced CRUD Module](../enhanced/software-engineering/CRUD_Python_Module2.py)
+- [Logo](../enhanced/software-engineering/Grazioso%20Salvare%20Logo.png)
+
+### Navigation
 - [Home](../index.md)
 - [Algorithms](algorithms.md)
 - [Databases](databases.md)
 - [Code Review](../code-review.md)
+- [Screenshots](../screenshots.md)
+
