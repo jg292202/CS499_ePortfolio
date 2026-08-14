@@ -12,9 +12,20 @@ Finally, I created an example_queries.py script to showcase the module’s capab
 
 Overall, this enhancement process significantly improved the artifact across multiple CS499 outcomes, such as software engineering through improved structure and logging, algorithms and data handling through advanced queries and aggregation, security through nested operator validation, and testing through a complete mock database test suite.  The result is a polished, secure, and professionally engineered database access layer that demonstrates my growth in databases and will make a great addition to my ePortfolio. 
 
-## Navigation
+## Original Artifact Files
+- [Original CRUD Module (CRUD_Python_Module.py)](../original/databases/CRUD_Python_Module.py)
+
+## Enhanced Artifact Files
+- [Enhanced CRUD Module (CRUD_Python_Module2.py)](../enhanced/databases/CRUD_Python_Module2.py)
+- [Example Queries](../enhanced/databases/example_queries.py)
+- [Logging Configuration](../enhanced/databases/logging_config.py)
+- [Service Layer](../enhanced/databases/service_layer.py)
+- [Unit Tests (test_crud_module.py)](../enhanced/databases/test_crud_module.py)
+- [Service Layer Tests (test_service_layer.py)](../enhanced/databases/test_service_layer.py)
+
+### Navigation
 - [Home](../index.md)
-- [Software Engineering Artifact](software-engineering.md)
-- [Algorithms Artifact](algoritms.md)
+- [Software Engineering](software-engineering.md)
+- [Algorithms](algorithms.md)
 - [Code Review](../code-review.md)
-  
+- [Screenshots](../screenshots.md)
