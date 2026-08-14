@@ -16,11 +16,12 @@ Together, these artifacts form a cohesive portfolio that demonstrates my abiliti
 
 This ePortfolio represents the culmination of my academic journey and serves as a professional introduction to my capabilities.  It demonstrates my strengths, documents my growth, and reflects the values I bring to the field, such as clarity, security, maintainability, and a commitment to continuous improvement.  As I transition into the next stage of my career, I am confident that the skills I have developed, supported by the evidence in this portfolio, will enable me to succeed as a software engineer and contribute meaningfully to the organizations I serve. 
 
-## Navigation
+### Navigation
 - [Software Engineering Artifact](artifacts/software-engineering.md)
 - [Algorithms & Data Structures Artifact](artifacts/algorithms.md)
 - [Databases Artifact](artifacts/databases.md)
 - [Code Review Video](code-review.md)
 - [Screenshots](screenshots.md)
+
 
     
