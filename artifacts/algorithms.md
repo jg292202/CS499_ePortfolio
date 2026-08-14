@@ -8,8 +8,24 @@ The enhancement aligns directly with the course outcomes I planned to meet in Mo
 
 Reflecting on the enhancement process, I learned how critical structural invariants are to the performance of tree-based data structures.  Implementing AVL balancing required a deeper understanding of recursion, height propagation, and rotation mechanics.  I gained valuable experience debugging subtle issues such as incorrect height calculations, imbalance conditions, and subtree updates.  Rewriting the deletion logic was particularly challenging because it required integrating BST removal rules with AVL rebalancing, ensuring that the tree remained structurally sound after node removal. Completing this enhancement increased my confidence in working with complex data structures and reinforced the importance of algorithmic rigor when designing scalable software solutions. 
 
-## Navigation
+## Original Artifact Files
+- [Original BST (BinarySearchTree_Original.cpp)](../original/algorithms/BinarySearchTree_Original.cpp)
+- [CSV Parser (CSVparser.cpp)](../original/algorithms/CSVparser.cpp)
+- [CSV Header (CSVparser.hpp)](../original/algorithms/CSVparser.hpp)
+- [Sales Data (eBid_Monthly_Sales.csv)](../original/algorithms/eBid_Monthly_Sales.csv)
+- [December Sales Data](../original/algorithms/eBid_Monthly_Sales_Dec_2016.csv)
+
+## Enhanced Artifact Files
+- [Enhanced AVL Tree (BinarySearchTree_EnhancedToAVLTree.cpp)](../enhanced/algorithms/BinarySearchTree_EnhancedToAVLTree.cpp)
+- [CSV Parser (CSVparser.cpp)](../enhanced/algorithms/CSVparser.cpp)
+- [CSV Header (CSVparser.hpp)](../enhanced/algorithms/CSVparser.hpp)
+- [Sales Data (eBid_Monthly_Sales.csv)](../enhanced/algorithms/eBid_Monthly_Sales.csv)
+- [License File](../enhanced/algorithms/License.txt)
+
+### Navigation
 - [Home](../index.md)
-- [Software Engineering Artifact](software-engineering.md)
-- [Databases Artifact](databases.md)
+- [Software Engineering](software-engineering.md)
+- [Databases](databases.md)
 - [Code Review](../code-review.md)
+- [Screenshots](../screenshots.md)
+
