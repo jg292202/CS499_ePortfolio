@@ -72,8 +72,8 @@ This page contains categorized screenshots demonstrating functionality, enhancem
 ---
 
 ### Navigation
-- **[Home](ca://s?q=Go_to_index.md)**  
-- **[Software Engineering](ca://s?q=Open_software_engineering_artifact)**  
-- **[Algorithms](ca://s?q=Open_algorithms_artifact)**  
-- **[Databases](ca://s?q=Open_databases_artifact)**  
-- **[Code Review](ca://s?q=Open_code_review_page)**  
+- [Home](../index.md)
+- [Software Engineering](artifacts/software-engineering.md)
+- [Algorithms](artifacts/algorithms.md)
+- [Databases](artifacts/databases.md)
+- [Code Review](code-review.md)
