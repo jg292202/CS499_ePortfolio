@@ -11,7 +11,7 @@ The ePortfolio also includes my professional self-assessment, code review video,
 ## ePortfolio Website
 The full ePortfolio is published using GitHub pages:
 
-**https://jg292202.githug.io/CS499_ePortfolio**
+**https://jg292202.github.io/CS499_ePortfolio**
 
 ---
 
