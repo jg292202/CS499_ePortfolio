@@ -71,7 +71,7 @@ Enhanced with:
 
 ---
 
-## 🎥 Code Review  
+## Code Review  
 My Milestone One code review video is available here:
 
 **https://youtu.be/bXNYA-oa3yo**
