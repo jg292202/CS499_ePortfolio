@@ -19,9 +19,22 @@ The full ePortfolio is published using GitHub pages:
 
 ## Repository Structure
 
-
-## Artifact Overview
-
+- index.md (Professional Self Assessment)
+- code-review.md
+- screenshots.md (Screenshot Gallery)
+- artifacts/ (Artifact Narrative Pages)
+   - software-engineering.md
+   - algorithms.md
+   - databases.md
+- original/ (Original Artifacts)
+   - software-engineering/
+   - algorithms/
+   - databases/
+- enhanced/ (Enhanced Artifacts)
+   - software-engineering/
+   - algorithms/
+   - databases/
+- screenshots/
 
 ---
 
