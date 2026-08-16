@@ -1,5 +1,7 @@
 # CS499 Computer Science Capstone - ePortfolio
+
 Southern New Hampshire University
+
 Author: Joseph Glista
 
 This repository contains my ePortfolio for the CS499 Computer Science Capstone course.
