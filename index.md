@@ -1,4 +1,4 @@
-# Professional Self-Assessment
+# Joseph Glista Professional Self-Assessment
 
 Throughout my journey in the Computer Science program at Southern New Hampshire University, I have grown from a student only knowing basic commands of an Arduino controller into a professional capable of designing, developing, securing, and evaluating modern software systems. Completing the capstone ePortfolio has given me the opportunity to reflect on that growth, demonstrate my technical abilities, and present a cohesive body of work that showcases my strengths, values, and readiness to enter the field of computer science. This portfolio represents not only the artifacts I enhanced, but also the mindset, discipline, and engineering practices I have developed along the way.
 
