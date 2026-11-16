@@ -1,33 +1,117 @@
-# Software Design & Engineering
+# Software Engineering & Design
 
-The artifact that I selected for enhancement is the CS340 Grazioso Salvare Dashboard, originally created as part of my Client/Server Development coursework.  The dashboard integrates Python, Dash, MongoDB, and custom CRUD operations to visualize rescue animal data.  It was one of the first projects in which I built a functional web-based data interface backed by a live database.  Because it already demonstrated meaningful work in software engineering, data handling, and user-interface design, it was a strong candidate for inclusion in my ePortfolio.  Enhancing this artifact allowed me to revisit the original implementation with a more mature engineering perspective and apply the professional practices I’ve developed throughout my coursework at SNHU.
+## Grazioso Salvare Dashboard
 
-I chose this artifact because it showcases several core competencies expected from a software engineer, including designing modular systems, implementing secure and maintainable code, working with databases, and building interactive user interfaces.  The enhancements I performed significantly strengthened the artifact’s alignment with industry standards.  The enhanced artifact was developed and tested within the Codio environment, which provides a temporary MongoDB instance. Because this database is not accessible outside Codio, the submitted artifact includes all code but will not connect to a live database. I refactored the dashboard into a layered architecture using a dedicated service layer, added dependency injection, implemented structured logging, introduced robust input validation, and improved error handling.  I also added unit tests to support maintainability and reliability.
+**Python • Dash • MongoDB • Service Layer • Dependency Injection • Structured Logging • Automated Testing**
 
-The enhancements I completed focused exclusively on the software design and engineering category.  The refactoring of the original code into a service-oriented architecture was the most impactful change, as it separated business logic from the user interface and made the system easier to maintain and extend.  Adding validation and error handling strengthened the reliability of the application and ensured that user input and database interactions were handled safely.  Implementing structured logging improved observability and made the system easier to debug and monitor. Together, these enhancements demonstrate my ability to evaluate an existing system and apply modern engineering techniques. 
+This artifact began as the Grazioso Salvare Dashboard developed during my CS 340 Client/Server Development coursework. The application combines Python, Dash, MongoDB, and custom CRUD operations to provide an interactive interface for viewing and filtering rescue-animal data.
 
-These enhancements align directly with the outcome of using proper techniques, skills, and tools to implement computing solutions that deliver value and meet industry expectations.  Enhancing this artifact taught me to review previously written code with a more seasoned and experienced mindset. One of the biggest lessons was recognizing how tightly-coupled logic can limit flexibility and maintainability. Refactoring the dashboard into a service-oriented architecture required me to think carefully about proper separation of concerns and how each part of the system should interact.  Implementing validation and error handling reinforced the importance of defensive programming, especially when dealing with user input and external data sources.  Adding unit tests helped me appreciate the value of testability and how it supports long-term reliability. The most significant challenge I faced was ensuring that new architectural changes did not break existing functionality, particularly in the Dash callbacks. Working through these challenges certainly built my confidence in applying professional engineering techniques and improved my ability to produce clean, maintainable and secure code. 
-	
-Overall, the enhancement process improved my understanding of software design and engineering and reinforced the skills I will need in my professional career. The improved artifact now reflects my current abilities as a software engineer and demonstrates my growth throughout my coursework.   
+For my Computer Science capstone, I revisited the original implementation from a more mature software-engineering perspective. Rather than adding features for their own sake, I focused on improving the application's architecture, maintainability, testability, validation, and observability.
 
+## Original Implementation
 
-## Original Artifact Files
-- [Original Dashboard (Dashboard.ipynb)](../original/software-engineering/Dashboard.ipynb)
-- [Original CRUD Module (CRUD_Python_Module2.py)](../original/software-engineering/CRUD_Python_Module2.py)
-- [Logo](../original/software-engineering/Grazioso%20Salvare%20Logo.png)
+The original application demonstrated several important capabilities:
 
-## Enhanced Artifact Files
-- [Enhanced Dashboard (Dashboard_Refactored.ipynb)](../enhanced/software-engineering/Dashboard_Refactored.ipynb)
+- Python-based application development
+- Dash user-interface components and callbacks
+- MongoDB-backed data access
+- Custom CRUD operations
+- Interactive filtering and data visualization
+- Integration between a user interface and persistent data
+
+The application was functional, but revisiting the implementation highlighted opportunities to improve separation of concerns and reduce coupling between user-interface behavior, business logic, and data access.
+
+## Capstone Enhancement
+
+The enhanced version refactors the application toward a more layered and maintainable architecture.
+
+### Service Layer
+
+A dedicated service layer separates application logic from the Dash interface and database-access code.
+
+This improves separation of concerns and gives the application clearer boundaries between presentation, application behavior, and persistence.
+
+### Dependency Injection
+
+Dependencies are supplied to application components rather than tightly coupling those components to concrete implementations.
+
+This reduces coupling and makes individual parts of the application easier to isolate and test.
+
+### Structured Logging
+
+Structured logging was introduced to improve visibility into application behavior and provide more useful information during debugging and troubleshooting.
+
+### Input Validation & Error Handling
+
+Validation and error handling were strengthened around user input and data operations.
+
+These changes help prevent invalid input from propagating through the application and provide more predictable behavior when operations fail.
+
+### Automated Testing
+
+Unit tests were added around the service layer so application behavior could be verified independently from the user interface.
+
+This was an important architectural improvement because testability became part of the design rather than something added only after the implementation was complete.
+
+## Engineering Impact
+
+The most significant lesson from this enhancement was recognizing how tightly coupled code can limit maintainability and testability even when the application itself works.
+
+Refactoring the dashboard required me to think more deliberately about:
+
+- Separation of concerns
+- Module responsibilities
+- Dependency management
+- Defensive programming
+- Observability
+- Error handling
+- Testability
+- Regression prevention
+
+The most challenging part of the enhancement was introducing these architectural changes without breaking existing application behavior, particularly around the Dash callbacks.
+
+That experience reinforced an engineering principle that continues to influence my current software work: **functionality is only one measure of software quality**. A system should also be understandable, testable, maintainable, and resilient to change.
+
+## Development Environment
+
+The enhanced artifact was developed and tested in the course's Codio environment using its temporary MongoDB instance.
+
+Because that database environment is not available outside the course environment, the repository contains the source code and supporting tests but does not connect to the original live database.
+
+The artifact is therefore presented primarily as evidence of software architecture, refactoring, testing, and engineering practices rather than as a deployed application.
+
+## Original Artifact
+
+The original implementation is preserved to make the progression from the initial application to the enhanced architecture directly inspectable.
+
+- [Original Dashboard](../original/software-engineering/Dashboard.ipynb)
+- [Original CRUD Module](../original/software-engineering/CRUD_Python_Module2.py)
+- [Original Grazioso Salvare Logo](../original/software-engineering/Grazioso%20Salvare%20Logo.png)
+
+## Enhanced Artifact
+
+The enhanced implementation contains the refactored dashboard and supporting architectural components.
+
+- [Enhanced Dashboard](../enhanced/software-engineering/Dashboard_Refactored.ipynb)
 - [Service Layer](../enhanced/software-engineering/service_layer.py)
 - [Logging Configuration](../enhanced/software-engineering/logging_config.py)
-- [Unit Tests (test_service_layer.py)](../enhanced/software-engineering/test_service_layer.py)
+- [Unit Tests](../enhanced/software-engineering/test_service_layer.py)
 - [Enhanced CRUD Module](../enhanced/software-engineering/CRUD_Python_Module2.py)
-- [Logo](../enhanced/software-engineering/Grazioso%20Salvare%20Logo.png)
+- [Enhanced Grazioso Salvare Logo](../enhanced/software-engineering/Grazioso%20Salvare%20Logo.png)
 
-### Navigation
-- [Home](../index.md)
-- [Algorithms](algorithms.md)
+## Visual Evidence
+
+Screenshots of the original and enhanced application are available in the portfolio gallery.
+
+[View Software Engineering Screenshots](../screenshots.md)
+
+---
+
+## Continue Exploring
+
+- [Professional Self-Assessment](../index.md)
+- [Algorithms & Data Structures](algorithms.md)
 - [Databases](databases.md)
 - [Code Review](../code-review.md)
-- [Screenshots](../screenshots.md)
-
+- [Screenshot Gallery](../screenshots.md)
+- [GitHub Repository Home](../README.md)
