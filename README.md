@@ -1,130 +1,159 @@
-# CS499 Computer Science Capstone - ePortfolio
+# Software Engineering ePortfolio
 
-Southern New Hampshire University
+**Python • C++ • MongoDB • Software Architecture • Algorithms • Automated Testing**
 
-Author: Joseph Glista
+This repository contains my Computer Science capstone ePortfolio from Southern New Hampshire University and documents the enhancement of three earlier software projects through a more mature engineering perspective.
 
-This repository contains my ePortfolio for the CS499 Computer Science Capstone course.
-It showcases three enhanced artifacts demonstrating my growth and proficiency in software engineering, algorithms and data structures, and database development.
-The ePortfolio also includes my professional self-assessment, code review video, and full documentation of enhancements.
+Rather than presenting only finished artifacts, the portfolio preserves both the **original and enhanced implementations** to show how I evaluated existing systems, identified limitations, made deliberate improvements, and validated the results.
 
----
+The three enhancement areas are:
+
+1. **Software Engineering & Design** - architectural refactoring and maintainability
+2. **Algorithms & Data Structures** - BST-to-AVL tree enhancement
+3. **Databases** - validation, query capabilities, testing, and data-layer design
 
 ## ePortfolio Website
-The full ePortfolio is published using GitHub pages:
+
+The complete ePortfolio, including my professional self-assessment, artifact narratives, code review, and screenshots, is available through GitHub Pages:
 
 **https://jg292202.github.io/CS499_ePortfolio**
 
 ---
 
+## Featured Artifacts
+
+### 1. Software Engineering & Design
+#### Grazioso Salvare Dashboard
+
+**Python • Dash • MongoDB • Modular Architecture • Automated Testing**
+
+The original Grazioso Salvare dashboard combined a Python/Dash interface with MongoDB-backed CRUD operations.
+
+For the capstone enhancement, I revisited the application with an emphasis on architecture, maintainability, testability, and defensive software design.
+
+Key enhancements include:
+
+- Dedicated service layer
+- Improved separation of concerns
+- Dependency injection
+- Structured logging
+- Input validation
+- Improved error handling
+- Unit testing
+
+**Explore:**
+
+- [Enhancement Narrative](artifacts/software-engineering.md)
+- [Original Source](original/software-engineering/)
+- [Enhanced Source](enhanced/software-engineering/)
+- [Screenshots](screenshots/software-engineering/)
+
+---
+
+### 2. Algorithms & Data Structures
+#### Binary Search Tree → AVL Tree
+
+**C++ • AVL Trees • Algorithms • Data Structures • Complexity Analysis**
+
+The original project stored and searched bid records using a traditional binary search tree.
+
+For the capstone enhancement, I converted the unbalanced BST into a self-balancing AVL tree capable of maintaining logarithmic worst-case search and insertion performance.
+
+Key enhancements include:
+
+- Height tracking
+- Balance-factor calculation
+- LL rotation
+- RR rotation
+- LR rotation
+- RL rotation
+- Rebalancing after tree operations
+- Enhanced deletion logic
+
+The enhancement demonstrates how structural invariants and balancing operations can improve worst-case tree performance from **O(n)** to **O(log n)**.
+
+**Explore:**
+
+- [Enhancement Narrative](artifacts/algorithms.md)
+- [Original BST](original/algorithms/)
+- [Enhanced AVL Tree](enhanced/algorithms/)
+- [Screenshots](screenshots/algorithms/)
+
+---
+
+### 3. Databases
+#### Enhanced CRUD Data Layer
+
+**Python • MongoDB • Validation • Aggregation • Automated Testing**
+
+The database enhancement revisits an earlier MongoDB CRUD module with an emphasis on secure data handling, expanded query capabilities, modularity, and testability.
+
+Key enhancements include:
+
+- Nested validation
+- Advanced query handling
+- Aggregation pipelines
+- Sorting and projection
+- Structured logging
+- Service-layer separation
+- Automated unit testing
+- FakeDB/FakeCollection testing support
+- Example query workflows
+
+**Explore:**
+
+- [Enhancement Narrative](artifacts/databases.md)
+- [Original CRUD Module](original/databases/)
+- [Enhanced Data Layer](enhanced/databases/)
+- [Screenshots](screenshots/databases/)
+
+---
+
+## Original → Enhanced
+
+A central goal of this portfolio is to demonstrate engineering growth rather than simply present completed assignments.
+
+Each artifact preserves an earlier implementation alongside its enhanced counterpart:
+
+| Area | Original | Enhancement |
+|---|---|---|
+| Software Engineering | Python/Dash/MongoDB dashboard | Layered architecture, service layer, dependency injection, logging, validation, testing |
+| Algorithms | Binary Search Tree | Self-balancing AVL tree with height tracking and rotations |
+| Databases | MongoDB CRUD module | Expanded validation, queries, aggregation, modularity, logging, and automated tests |
+
+This structure makes it possible to inspect not only the final result, but also the engineering decisions that transformed the original implementation.
+
+---
+
+## Engineering Approach
+
+One idea connects all three enhancements:
+
+> **Understand the existing system, identify its limitations, make deliberate improvements, test the result, and continue refining the design.**
+
+The capstone gave me an opportunity to apply that process to software I had written earlier in the Computer Science program.
+
+Revisiting previous work helped strengthen my understanding of:
+
+- Separation of concerns
+- Maintainable architecture
+- Defensive programming
+- Automated testing
+- Data integrity
+- Algorithmic trade-offs
+- Debugging and observability
+- Technical documentation
+
+These principles continue to influence the backend and secure-software development work I am pursuing today.
+
+---
+
+## Code Review
+
+The capstone began with a code review of the selected artifacts, including analysis of existing functionality, limitations, and planned enhancements.
+
+[View the Code Review](code-review.md)
+
+---
+
 ## Repository Structure
-
-- index.md (Professional Self Assessment)
-- code-review.md
-- screenshots.md (Screenshot Gallery)
-- artifacts/ (Artifact Narrative Pages)
-   - software-engineering.md
-   - algorithms.md
-   - databases.md
-- original/ (Original Artifacts)
-   - software-engineering/
-   - algorithms/
-   - databases/
-- enhanced/ (Enhanced Artifacts)
-   - software-engineering/
-   - algorithms/
-   - databases/
-- screenshots/
-
----
-
-## Artifact Overview
-
-### 1. **Software Engineering Artifact — Grazioso Salvare Dashboard**
-Enhanced with:
-- Service-oriented architecture  
-- Dependency injection  
-- Structured logging  
-- Robust validation & error handling  
-- Unit tests  
-
-**Links:**  
-- [Enhanced Version](enhanced/software-engineering/)  
-- [Original Version](original/software-engineering/)  
-- [Narrative](artifacts/software-engineering.md)
-
----
-
-### 2. **Algorithms & Data Structures Artifact — AVL Tree Enhancement**
-Enhanced with:
-- Balanced AVL tree implementation  
-- Rotations (LL, RR, LR, RL)  
-- Height tracking  
-- Improved search efficiency  
-- Refactored CSV parsing  
-
-**Links:**  
-- [Enhanced Version](enhanced/algorithms/)  
-- [Original Version](original/algorithms/)  
-- [Narrative](artifacts/algorithms.md)
-
----
-
-### 3. **Databases Artifact — Python CRUD Module**
-Enhanced with:
-- Nested validation  
-- Aggregation pipelines  
-- Sorting & projection  
-- FakeDB + FakeCollection for testing  
-- Full unit test suite  
-- Service layer + logging  
-
-**Links:**  
-- [Enhanced Version](enhanced/databases/)  
-- [Original Version](original/databases/)  
-- [Narrative](artifacts/databases.md)
-
----
-
-## Code Review  
-My Milestone One code review video is available here:
-
-**https://youtu.be/bXNYA-oa3yo**
-
----
-
-## CS499 Outcome Alignment
-
-This ePortfolio demonstrates proficiency in all five CS499 program outcomes:
-
-1. **Software Engineering & Design**  
-   - Modular architecture, dependency injection, logging, validation, error handling.
-
-2. **Algorithms & Data Structures**  
-   - AVL tree rotations, height balancing, complexity analysis, optimized search.
-
-3. **Databases**  
-   - Secure CRUD operations, validation, aggregation, testing, service-layer design.
-
-4. **Security Mindset**  
-   - Defensive programming, input validation, safe data handling, test-driven reliability.
-
-5. **Professional Communication**  
-   - Narratives, documentation, code review, structured explanations of enhancements.
-
----
-
-### Navigation  
-- **[Software Engineering Artifact](artifacts/software-engineering.md)**  
-- **[Algorithms Artifact](artifacts/algorithms.md)**  
-- **[Databases Artifact](artifacts/databases.md)**  
-- **[Code Review](code-review.md)**  
-- **[Screenshots](screenshots.md)**  
-- **[Home](index.md)**  
-
----
-
-### Contact  
-If you would like to connect or learn more about my work, feel free to reach out.
-**joseph.glista@snhu.edu**
-
