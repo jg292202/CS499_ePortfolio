@@ -1,31 +1,152 @@
-# Databases
+# Databases & Secure Data Handling
 
-The artifact that I selected for enhancement in Milestone Four is the Python-based CRUD module originally developed in CS340 for interacting with the AAC MongoDB dataset.  I chose this artifact because it represents a foundational component of full-stack development, including secure, reliable, and testable data access.  In its original form, the module provided only basic create, read, update, and delete operations with minimal validation, no logging, and no meaningful error handling. For this milestone, I significantly expanded and hardened this module to meet professional standards and demonstrate competency in software engineering, database design, security, and testing.  These enhancements transformed the artifact from a simple academic exercise into a production-ready data access layer suitable for my ePortfolio.
+## Enhanced MongoDB CRUD Data Layer
 
-The first major enhancement involved restructuring the module to use dependency injection, allowing the database client to be passed in rather than hardcoded.  This change improves flexibility, supports mocking during testing, and aligns with modern engineering practices.  I also added structured logging throughout the module using a dedicated logging configuration file, enabling traceability of all CRUD operations, aggregation pipelines, and error conditions. Error handling was expanded to catch and log exceptions consistently, ensuring that failures are visible and diagnosable.  To improve database functionality, I added support for projections, sorting, and aggregation pipelines, allowing the module to perform more advanced queries such as grouping, counting, and averaging fields across the AAC dataset.  These enhancements demonstrate deeper database competency and elevate the module beyond the simple CRUD operations. 
+**Python • MongoDB • Validation • Aggregation Pipelines • Structured Logging • Automated Testing**
 
-Security was a central focus of my improvements. The original module allowed arbitrary MongoDB queries, including dangerous operators such as $where, $eval, and $function, which can execute server-side JavaScript and pose serious injection risks. I implemented a recursive validation system that inspects every level of a query, including lists, dictionaries, and nested structures, to detect and reject forbidden operators. This nested validation ensures that malicious queries cannot bypass security checks by embedding unsafe operators deep within the query structure.  This enhancement directly supports the CS499 security outcome by demonstrating proactive identification and mitigation of vulnerabilities.
+This artifact began as a Python CRUD module developed during my CS 340 Client/Server Development coursework for interacting with the AAC MongoDB dataset.
 
-To ensure the module was fully testable, I created a comprehensive unit test suite using Python’s unittest framework.  Because the enhanced module uses dependency injection, I was able to build a complete, in-memory FakeDB, and FakeCollection system that simulates MongoDB’s behavior, including sorting, allowing the tests to exercise the module exactly as real queries would.  The test suite covers all CRUD operations, projections, sorting, aggregation, and both top-level and nested security validation. This demonstrates strong testability and reinforces the reliability of the enhanced module.
+The original implementation provided the core create, read, update, and delete operations needed by the application. For my Computer Science capstone, I revisited the data layer with a stronger focus on modularity, validation, query capabilities, observability, security, and testability.
 
-Finally, I created an example_queries.py script to showcase the module’s capabilities against the real AAC dataset.  This script demonstrates filtering, projection, sorting, aggregation, and security validation in action, demonstrating that the enhanced module performs correctly in a real-world context. Screenshots of these results, along with unit test output and logging behavior, are included in the artifact ZIP to verify functionality.
+## Original Implementation
 
-Overall, this enhancement process significantly improved the artifact across multiple CS499 outcomes, such as software engineering through improved structure and logging, algorithms and data handling through advanced queries and aggregation, security through nested operator validation, and testing through a complete mock database test suite.  The result is a polished, secure, and professionally engineered database access layer that demonstrates my growth in databases and will make a great addition to my ePortfolio. 
+The original module provided a functional interface for basic MongoDB operations, including:
 
-## Original Artifact Files
-- [Original CRUD Module (CRUD_Python_Module.py)](../original/databases/CRUD_Python_Module.py)
+- Create
+- Read
+- Update
+- Delete
 
-## Enhanced Artifact Files
-- [Enhanced CRUD Module (CRUD_Python_Module2.py)](../enhanced/databases/CRUD_Python_Module2.py)
+While the module satisfied the original application requirements, revisiting the implementation revealed opportunities to improve how it handled dependencies, validation, errors, advanced queries, and automated testing.
+
+## Capstone Enhancement
+
+The enhanced data layer expands the original CRUD module into a more modular and testable implementation.
+
+### Dependency Injection
+
+The database dependency can be supplied to the data-access code rather than being tightly coupled to one database connection.
+
+This makes the module more flexible and, importantly, allows test implementations to be substituted without requiring a live MongoDB database.
+
+### Structured Logging
+
+A dedicated logging configuration was added to improve visibility into application behavior.
+
+Logging provides additional context around CRUD operations, query execution, aggregation behavior, and error conditions, making failures easier to diagnose.
+
+### Query Capabilities
+
+The enhanced module expands beyond basic CRUD operations with support for:
+
+- Query filtering
+- Projection
+- Sorting
+- Aggregation pipelines
+- Grouping
+- Counting
+- Aggregate calculations
+
+An `example_queries.py` script demonstrates these capabilities using practical query workflows.
+
+## Defensive Query Validation
+
+A major focus of the enhancement was strengthening validation around MongoDB query input.
+
+The module recursively examines nested query structures, including dictionaries and lists, and rejects selected operators that should not be accepted through the application interface.
+
+Examples include:
+
+- `$where`
+- `$eval`
+- `$function`
+
+Recursive validation prevents these operators from bypassing checks simply by appearing deeper within a nested query structure.
+
+This enhancement reinforced an important secure-development principle: **data entering a system should be treated as untrusted until it has been validated against the operations the application intentionally supports.**
+
+## Automated Testing
+
+The enhanced module includes automated tests using Python's `unittest` framework.
+
+To make database behavior testable without depending on the course's live MongoDB environment, I created an in-memory FakeDB/FakeCollection test implementation.
+
+The test suite exercises areas including:
+
+- CRUD operations
+- Query behavior
+- Projection
+- Sorting
+- Aggregation
+- Top-level query validation
+- Nested query validation
+- Service-layer behavior
+
+Separating the database dependency from the application code made it possible to verify these behaviors repeatedly without depending on an external database connection.
+
+## Example Queries
+
+The enhanced artifact includes `example_queries.py` to demonstrate the expanded data-access functionality through example workflows.
+
+These examples exercise filtering, projection, sorting, aggregation, and validation behavior and provide a practical demonstration of how the enhanced module can be used.
+
+## Engineering Impact
+
+The most important improvement was not any individual query feature. It was changing the data layer into something that could be **isolated, observed, validated, and tested**.
+
+The enhancement strengthened my understanding of:
+
+- Database abstraction
+- Dependency injection
+- Input validation
+- Defensive programming
+- Advanced MongoDB querying
+- Aggregation pipelines
+- Structured logging
+- Error handling
+- Unit testing
+- Test doubles and dependency isolation
+
+It also demonstrated how architectural decisions affect testability. Once the database dependency could be injected, the module no longer required a live database simply to verify application behavior.
+
+That lesson has carried into my later backend work, where I continue to treat data access, validation, testing, and separation of concerns as fundamental parts of application design.
+
+## Development Environment
+
+The original application used the AAC MongoDB dataset within the course development environment.
+
+Because that database environment is not available outside the course environment, the repository focuses on the source code, example queries, and automated test infrastructure used to demonstrate the enhanced data layer.
+
+## Original Artifact
+
+The original CRUD implementation is preserved for comparison:
+
+- [Original CRUD Module](../original/databases/CRUD_Python_Module.py)
+
+## Enhanced Artifact
+
+The enhanced implementation and supporting test infrastructure are available here:
+
+- [Enhanced CRUD Module](../enhanced/databases/CRUD_Python_Module2.py)
 - [Example Queries](../enhanced/databases/example_queries.py)
 - [Logging Configuration](../enhanced/databases/logging_config.py)
 - [Service Layer](../enhanced/databases/service_layer.py)
-- [Unit Tests (test_crud_module.py)](../enhanced/databases/test_crud_module.py)
-- [Service Layer Tests (test_service_layer.py)](../enhanced/databases/test_service_layer.py)
+- [CRUD Module Tests](../enhanced/databases/test_crud_module.py)
+- [Service Layer Tests](../enhanced/databases/test_service_layer.py)
 
-### Navigation
-- [Home](../index.md)
-- [Software Engineering](software-engineering.md)
-- [Algorithms](algorithms.md)
+## Visual Evidence
+
+Screenshots showing example output, test execution, and application behavior are available in the portfolio gallery.
+
+[View Screenshot Gallery](../screenshots.md)
+
+---
+
+## Continue Exploring
+
+- [ePortfolio Home](../index.md)
+- [Software Engineering & Design](software-engineering.md)
+- [Algorithms & Data Structures](algorithms.md)
 - [Code Review](../code-review.md)
-- [Screenshots](../screenshots.md)
+- [Screenshot Gallery](../screenshots.md)
+- [Repository Overview](../README.md)
