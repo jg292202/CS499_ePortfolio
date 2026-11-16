@@ -1,79 +1,92 @@
 # Project Screenshots
 
-This page contains categorized screenshots demonstrating functionality, enhancements, and verification for each artifact in the CS499 ePortfolio.
+This gallery provides visual evidence of the functionality, enhancements, testing, and validation documented throughout the CS 499 ePortfolio.
 
 ---
 
-## Software Engineering Screenshots
+## Software Engineering & Design
 
-### Screenshot 1
-![Software Engineering Screenshot 1](screenshots/software-engineering/Software1.png)
+### Refactored Grazioso Salvare Dashboard
 
-*Updated dashboard running in JypyterLab.*
+![Refactored Grazioso Salvare Dashboard](screenshots/software-engineering/Software1.png)
 
-### Screenshot 2
-![Software Engineering Screenshot 2](screenshots/software-engineering/Software2.png)
+*The enhanced Grazioso Salvare dashboard running in JupyterLab after the software-engineering refactor.*
 
-*When trying to enter invalid input into the DataTable filter query (“1 = 1”), the table safely returns “No data to display. No data available for map” instead of crashing.*
+### Input Validation
 
-### Screenshot 3
-![Software Engineering Screenshot 3](screenshots/software-engineering/Software3.png)
+![Dashboard Input Validation](screenshots/software-engineering/Software2.png)
 
-*dashboard.log shows a structured log including timestamps, log levels, messages from service_layer.py and messages about user actions.*
+*Invalid DataTable filter input (`1 = 1`) is handled without crashing the application. The dashboard returns no matching data rather than attempting to process the invalid filter.*
 
-### Screenshot 4
-![Software Engineering Screenshot 4](screenshots/software-engineering/Software4.png)
+### Structured Logging
 
-*service_layer.py with the AnimalService class, validation methods and dependency injection by way of (service = AnimalService(db)).*
+![Structured Application Logging](screenshots/software-engineering/Software3.png)
 
-### Screenshot 5
-![Software Engineering Screenshot 5](screenshots/software-engineering/Software5.png)
+*Structured application logs include timestamps, log levels, service-layer messages, and information about application activity.*
 
-*Output from test_service_layer.py.  This verifies that the logic correctly handles both valid and invalid inputs.*
+### Service Layer & Dependency Injection
 
-### Screenshot 6
-![Software Engineering Screenshot 6](screenshots/software-engineering/Software6.png)
+![Service Layer Implementation](screenshots/software-engineering/Software4.png)
 
-*service_layer.py implementation was successful and fully functionality was maintained.  This shot shows selecting “Mountain/Wilderness Rescue” and the DataTable, pie chart and map all updated successfully. *
+*The `AnimalService` implementation demonstrates the dedicated service layer, validation logic, and injected database dependency introduced during the enhancement.*
 
----
+### Service-Layer Tests
 
-## Algorithms Screenshots
+![Service Layer Test Results](screenshots/software-engineering/Software5.png)
 
-### Screenshot 1
-![Algorithms Screenshot 1](screenshots/algorithms/Algorithms1.png)
+*Automated service-layer test output verifies expected behavior for valid and invalid inputs.*
 
-*Full functionality was maintained when enhancing from BST, including the menu operations.*
+### Functional Validation After Refactoring
 
-### Screenshot 2
-![Algorithms Screenshot 2](screenshots/algorithms/Algorithms2.png)
+![Dashboard Functional Validation](screenshots/software-engineering/Software6.png)
 
-*The AVL search was successfull in finding the requested bid.*
+*The enhanced dashboard continues to update the DataTable, visualization, and map when the Mountain/Wilderness Rescue filter is selected, verifying that functionality was preserved after the architectural refactor.*
 
 ---
 
-## Databases Screenshots
+## Algorithms & Data Structures
 
-### Screenshot 1
-![Databases Screenshot 1](screenshots/databases/Databases1.png)
+### AVL Application Functionality
 
-*Updated file structure and logging_config.py showing the get_logger() function, formatter and stream handler implemented for the enhancement.*
+![AVL Tree Application Functionality](screenshots/algorithms/Algorithms1.png)
 
-### Screenshot 2
-![Databases Screenshot 2](screenshots/databases/Databases2.png)
+*The enhanced AVL-tree implementation preserves the application's original menu-driven operations after replacing the unbalanced binary search tree.*
 
-*The console results of running example_queries.py showing that advanced queries are functional with the new enhancement.*
+### AVL Search
 
-### Screenshot 3
-![Databases Screenshot 3](screenshots/databases/Databases3.png)
+![AVL Tree Search Result](screenshots/algorithms/Algorithms2.png)
 
-*Console results of running test_crud_module.py indicating that all aspects of the enhanced CRUD module were successful.  This includes CRUD, filtering, projection, aggregation, and validation.*
+*The enhanced tree successfully locates the requested bid record using the AVL-based implementation.*
 
 ---
 
-### Navigation
-- [Home](../index.md)
-- [Software Engineering](artifacts/software-engineering.md)
-- [Algorithms](artifacts/algorithms.md)
-- [Databases](artifacts/databases.md)
+## Databases & Secure Data Handling
+
+### Logging Configuration
+
+![Database Logging Configuration](screenshots/databases/Databases1.png)
+
+*The enhanced project structure and `logging_config.py` demonstrate the logging configuration introduced for database and service-layer operations.*
+
+### Advanced Query Examples
+
+![Advanced MongoDB Query Results](screenshots/databases/Databases2.png)
+
+*Console output from `example_queries.py` demonstrates the enhanced module's filtering, projection, sorting, aggregation, and query functionality.*
+
+### Automated CRUD & Validation Tests
+
+![Database Test Results](screenshots/databases/Databases3.png)
+
+*Automated test output from `test_crud_module.py` verifies CRUD behavior, filtering, projection, aggregation, and validation in the enhanced data-access layer.*
+
+---
+
+## Continue Exploring
+
+- [Home](index.md)
+- [Software Engineering & Design](artifacts/software-engineering.md)
+- [Algorithms & Data Structures](artifacts/algorithms.md)
+- [Databases & Secure Data Handling](artifacts/databases.md)
 - [Code Review](code-review.md)
+- [Repository Overview](README.md)
