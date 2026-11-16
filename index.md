@@ -1,27 +1,93 @@
-# Joseph Glista Professional Self-Assessment
+# Joseph Glista | Professional Self-Assessment
 
-Throughout my journey in the Computer Science program at Southern New Hampshire University, I have grown from a student only knowing basic commands of an Arduino controller into a professional capable of designing, developing, securing, and evaluating modern software systems. Completing the capstone ePortfolio has given me the opportunity to reflect on that growth, demonstrate my technical abilities, and present a cohesive body of work that showcases my strengths, values, and readiness to enter the field of computer science. This portfolio represents not only the artifacts I enhanced, but also the mindset, discipline, and engineering practices I have developed along the way.
+Engineering has been the common thread throughout my career, and completing my Computer Science degree gave me a new environment in which to apply that mindset. This ePortfolio captures that transition by showing how I revisited earlier software projects, identified limitations, and deliberately improved their architecture, algorithms, data handling, security, and testing.
 
-Throughout the program, I strengthened my ability to work effectively in collaborative and professional environments, even though most coursework was completed individually.  Collaboration in computer science often extends beyond group projects, whereby it includes communicating clearly with instructors, interpreting stakeholder requirements, and incorporating feedback into iterative improvements.  Across multiple courses, I learned how to break down complex problems, document my reasoning, and ensure that my work is aligned with project goals and expectations.  I also developed adaptability, such as adjusting to new tools, new workflows and new perspectives, which directly supports my ability to contribute within cross-functional teams in industry.
+Completing my B.S. in Computer Science at Southern New Hampshire University with a focus in Software Engineering strengthened both my technical foundation and the way I approach software development. Throughout the program, I gained experience working with multiple languages, frameworks, databases, and development environments, but the most valuable growth was learning how to evaluate a system as a whole: understanding its requirements, identifying weaknesses, making deliberate changes, testing the result, and clearly communicating the reasoning behind those decisions.
 
-Communication has been equally central to my development.  Through written narratives, code reviews, presentations, and documentation, I learned how to explain technical concepts to different audiences, from peers to instructors to hypothetical managers.  The capstone code review reinforced this skill by requiring me to articulate the existing functionality of my artifact, identify areas for improvement, and justify my enhancement plan.  This ability to deliver clear, professional communication, both oral and written, is essential in software engineering roles, especially in environments where decisions must be well-supported and transparent.
+## Software Engineering & Design
 
-My coursework also strengthened by understanding of data structures and algorithms, which became quite evident during my enhancement of the AVL tree.  Implementing rotations, height balancing, and efficient search operations required me to apply algorithmic principles, analyze time complexity, and make design choices that balanced performance with clarity.  These experiences taught me how to evaluative trade-offs, optimize code, and ensure that solutions are both correct and efficient.  Algorithmic thinking is foundational to computer science, and this program helped me develop confidence in applying it to real problems. 
+My growth in software engineering is best demonstrated by the enhancement of the **Grazioso Salvare dashboard**, originally developed during my Client/Server Development coursework.
 
-In the area of software engineering, I learned how to design modular, maintainable, and scalable systems.  My enhancement of the Grazioso Salvare dashboard demonstrated this growth through improved architecture, dependency injection, structured logging, and robust error handling.  These enhancements reflect industry best practices and algin with my career interests in DevSecOps and full-stack development.  I learned how small architectural improvements can significantly increase clarity, testability, and long-term maintainability, all of which are skills that are essential for building production-ready systems. 
+The original application combined Python, Dash, MongoDB, and custom CRUD operations to create an interactive, database-backed interface. During the capstone, I revisited that implementation with a stronger understanding of software architecture and maintainability.
 
-The program also strengthened my understanding of databases and secure coding practices, culminating in the enhancement of my CRUD module.  By adding nested validation, advanced query support, aggregation pipelines, sorting, projection and a full unit test suite using a FakeDB, I demonstrated my ability to build secure, reliable, and testable data access layers.  This work reinforced the importance of anticipating adversarial behavior, validating inputs, and designing systems that protect data integrity.  Developing a security mindset has been one of the most valuable outcomes of the program, especially as I move toward a career in DevSecOps where secure architecture is essential.  
+I refactored the application toward a layered design with a dedicated service layer, improved separation of concerns, dependency injection, structured logging, stronger input validation and error handling, and automated testing.
 
-Together, these artifacts form a cohesive portfolio that demonstrates my abilities across the three major areas of computer science: software engineering and design, algorithms and data structures, and databases.  Each artifact showcases a different aspect of my skill set, and together they illustrate my readiness to contribute meaningfully to professional software development environments.  The enhancements I completed not only improved the artifacts themselves but also helped me refine my engineering discipline, problem-solving abilities, and commitments to secure, maintainable code.
+This enhancement changed the way I evaluate software. Functionality remains essential, but working software is only the starting point. Maintainability, testability, observability, modularity, and clear boundaries between responsibilities matter because software must remain understandable and adaptable after the initial implementation is complete.
 
-This ePortfolio represents the culmination of my academic journey and serves as a professional introduction to my capabilities.  It demonstrates my strengths, documents my growth, and reflects the values I bring to the field, such as clarity, security, maintainability, and a commitment to continuous improvement.  As I transition into the next stage of my career, I am confident that the skills I have developed, supported by the evidence in this portfolio, will enable me to succeed as a software engineer and contribute meaningfully to the organizations I serve. 
+[Explore the Software Engineering Artifact](artifacts/software-engineering.md)
 
-### Navigation
-- [Software Engineering Artifact](artifacts/software-engineering.md)
-- [Algorithms & Data Structures Artifact](artifacts/algorithms.md)
-- [Databases Artifact](artifacts/databases.md)
-- [Code Review Video](code-review.md)
-- [Screenshots](screenshots.md)
+## Algorithms & Data Structures
 
+My algorithms and data structures enhancement began with a C++ binary search tree used to organize and search bid records.
 
-    
+The original implementation provided standard binary search tree operations, but its unbalanced structure could degrade in performance as the shape of the tree changed. During the capstone, I converted the BST into a self-balancing **AVL tree**.
+
+The enhancement required implementing height tracking, balance-factor calculations, and LL, RR, LR, and RL rotations, along with rebalancing behavior surrounding insertion and deletion. This improved worst-case tree operations from linear behavior in a severely unbalanced tree toward the logarithmic performance expected from a balanced AVL structure.
+
+More importantly, the project strengthened my understanding of why algorithmic correctness involves more than producing the correct output. Data structures carry structural invariants and performance characteristics that must be preserved as the system changes. Debugging rotation logic, height propagation, and deletion behavior required careful reasoning about those invariants rather than simply tracing individual lines of code.
+
+[Explore the Algorithms & Data Structures Artifact](artifacts/algorithms.md)
+
+## Databases & Secure Data Handling
+
+The database enhancement revisited an earlier Python/MongoDB CRUD module and expanded it into a more capable, testable, and defensive data-access implementation.
+
+The enhanced version introduced nested validation, additional query capabilities, aggregation pipelines, sorting and projection, structured logging, service-layer separation, and automated tests using a FakeDB/FakeCollection environment.
+
+This work reinforced the importance of treating data boundaries as trust boundaries. Applications should not assume that incoming data is valid simply because it came from an expected interface. Validation, predictable query behavior, error handling, and testing all contribute to maintaining data integrity and reducing unexpected behavior.
+
+The project also strengthened my appreciation for automated testing as an engineering tool. Building repeatable tests around database and service-layer behavior made it possible to verify changes systematically rather than relying solely on manual inspection.
+
+[Explore the Databases Artifact](artifacts/databases.md)
+
+## Problem Solving & Engineering Growth
+
+Although the three artifacts address different areas of computer science, they share the same underlying engineering process:
+
+1. Understand the existing system and its requirements.
+2. Identify limitations, risks, or opportunities for improvement.
+3. Analyze possible solutions and their trade-offs.
+4. Make deliberate changes.
+5. Test and evaluate the result.
+6. Continue refining the system based on evidence.
+
+That process closely reflects the structured problem-solving approach I developed earlier in my engineering career. Computer science introduced new tools and abstractions, but the underlying discipline remains familiar: understand the system before changing it, look for root causes rather than symptoms, and verify results rather than assuming a change worked.
+
+## Collaboration & Technical Communication
+
+Most of my Computer Science coursework was completed individually, but the program also strengthened skills that matter in collaborative engineering environments.
+
+Requirements had to be interpreted accurately. Technical decisions had to be explained and defended. Instructor feedback had to be evaluated and incorporated. Code reviews required me to examine existing implementations critically, identify opportunities for improvement, and communicate those findings clearly.
+
+Written narratives, technical documentation, presentations, code reviews, and project artifacts also gave me practice communicating technical ideas to different audiences.
+
+Those experiences reinforced that software engineering is not simplymitations exist, and how proposed changes improve the system.
+
+[View the Capstone Code Review](code-review.md)
+
+## Where I Am Now
+
+The capstone represents the conclusion of my Computer Science degree, but not the conclusion of my development as a software engineer.
+
+My current focus is backend software development, particularly APIs, relational databases, authentication and authorization, automated testing, and secure application design. I am continuing to build on the foundation represented in this portfolio through independent software projects and deeper work with modern backend technologies.
+
+Longer term, I am particularly interested in the intersection of software development, security, automation, AI-assisted engineering, and deployment. Those interests are guiding my continued development toward secure software delivery and DevSecOps-oriented engineering.
+
+What I value most from the Computer Science program is not any individual language or framework. Technologies will continue to change. The more durable skill is the ability to approach unfamiliar systems methodically, understand how their pieces interact, learn what is necessary, test assumptions, and improve the system without losing sight of reliability, security, or maintainability.
+
+That is the engineering mindset I bring forward from this portfolio.
+
+---
+
+## Explore the ePortfolio
+
+- artifacts/software-engineering.md
+- artifacts/algorithms.md
+- artifacts/databases.md
+- [Code Review](code-review.md)
+- [Screenshot Gallery](screenshots.md)
+
+---
+
+**[View my GitHub Profile](https://github.com/jg292202)**  
+**[Connect with me on LinkedIn](https://www.linkedin.com/in/joseph-glista-218a87165/)**
