@@ -1,12 +1,26 @@
-# Code Review
+# Capstone Code Review
 
-My CS499 code review video is hosted on YouTube:
+The CS 499 capstone began with a review of the software artifacts selected for enhancement.
 
-[Watch the Code Review](https://youtu.be/bXNYA-oa3yo)
+The code review evaluates the original implementations, identifies opportunities for improvement, and outlines the engineering changes that were later applied across the three portfolio areas:
 
-### Navigation
-- [Home](../index.md)
-- [Software Engineering Artifact](artifacts/software-engineering.md)
-- [Algorithms Artifact](artifacts/algorithms.md)
-- [Databases Artifact](artifacts/databases.md)
-- [Screenshots](screenshots.md)
+- **Software Engineering & Design**
+- **Algorithms & Data Structures**
+- **Databases & Secure Data Handling**
+
+The review provides additional context for the original-to-enhanced progression documented throughout this ePortfolio.
+
+## Video
+
+[Watch the CS 499 Code Review on YouTube](https://youtu.be/bXNYA-oa3yo)
+
+---
+
+## Continue Exploring
+
+- [Home](index.md)
+- [Software Engineering & Design](artifacts/software-engineering.md)
+- [Algorithms & Data Structures](artifacts/algorithms.md)
+- [Databases & Secure Data Handling](artifacts/databases.md)
+- [Screenshot Gallery](screenshots.md)
+- [Repository Overview](README.md)
